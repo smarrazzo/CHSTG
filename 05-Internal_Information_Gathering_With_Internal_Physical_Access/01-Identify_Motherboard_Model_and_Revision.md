@@ -5,6 +5,7 @@
 |CHSTG-INT-01|
 
 ## Summary
+
 This control aims to identify the exact motherboard model and hardware revision after device disassembly. The objective is to collect motherboard-specific identifiers and correlate them with previously gathered information from CHSTG-INFO-01.
 
 ## Test Objectives

@@ -5,6 +5,7 @@
 |CHSTG-INFO-07|
 
 ## Summary
+
 This control aims to identify key internal components such as the BIOS/UEFI chip, the embedded controller, and the TPM chip using publicly available documentation. The identification is performed using high-resolution motherboard images, boardview files, or schematic files without physically accessing the device.
 
 ## Test Objectives

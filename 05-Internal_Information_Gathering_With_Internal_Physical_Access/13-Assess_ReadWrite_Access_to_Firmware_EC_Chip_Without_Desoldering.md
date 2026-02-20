@@ -5,6 +5,7 @@
 |CHSTG-INT-13|
 
 ## Summary
+
 This control aims to assess whether the BIOS/UEFI firmware chip and the Embedded Controller (EC) chip, if present, could be read from or written to without desoldering. The objective is to evaluate exposure to in-circuit access via physical probing or clip-based techniques.
 
 ## Test Objectives

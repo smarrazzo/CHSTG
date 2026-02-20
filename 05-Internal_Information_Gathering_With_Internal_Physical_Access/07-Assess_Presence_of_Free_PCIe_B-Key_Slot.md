@@ -5,6 +5,7 @@
 |CHSTG-INT-07|
 
 ## Summary
+
 This control aims to determine whether a free PCIe B-key slot is present on the motherboard. The objective is to identify the availability of an unused internal expansion interface.
 
 ## Test Objectives

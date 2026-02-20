@@ -1,13 +1,12 @@
 # Assess Disk Decryption on Another System
 
-| ID           |
-|--------------|
-| CHSTG-DISK-04 |
+|ID          |
+|------------|
+|CHSTG-DISK-04|
 
 ## Summary
+
 This control evaluates the final impact of a successful key extraction by attempting to decrypt the target disk on a non-native system. Once the master encryption keys (BitLocker, LUKS, etc.) are obtained via DMA, cold boot, or TPM sniffing, the attacker can move the disk to a different machine to bypass all native operating system security measures. Mounting a BitLocker-encrypted Windows drive on a Linux environment is a classic example, as it allows the attacker to entirely ignore NTFS Access Control Lists (ACLs) once the volume is decrypted.
-
-
 
 ## Test Objectives
 - Verify that the encryption keys or material retrieved in previous audit steps are valid and sufficient for full data access.

@@ -5,6 +5,7 @@
 |CHSTG-BOOT-04|
 
 ## Summary
+
 This control aims to determine whether the system uses a fast boot mechanism that reduces or skips parts of the standard initialization process during startup.
 
 ## Test Objectives

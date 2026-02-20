@@ -5,6 +5,7 @@
 |CHSTG-FIRM-05|
 
 ## Summary
+
 This control aims to determine whether a manufacturer factory password exists that could bypass the configured BIOS/UEFI protection.
 
 ## Test Objectives

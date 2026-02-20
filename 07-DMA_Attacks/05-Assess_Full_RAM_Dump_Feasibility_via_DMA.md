@@ -1,10 +1,11 @@
 # Assess Full RAM Dump Feasibility via DMA
 
-| ID           |
-|--------------|
-| CHSTG-DMA-05 |
+|ID          |
+|------------|
+|CHSTG-DMA-05|
 
 ## Summary
+
 Once Direct Memory Access (DMA) has been successfully established through an external or internal port (as tested in CHSTG-DMA-01 through CHSTG-DMA-03), the next critical step is evaluating the ability to perform a full forensic acquisition of the system's volatile memory. A full RAM dump allows an attacker to perform offline analysis to extract sensitive information such as encryption keys (BitLocker, LUKS), user credentials, and active session tokens. This control focuses on the technical execution of a memory dump using specialized hardware and software.
 
 ## Test Objectives

@@ -5,6 +5,7 @@
 |CHSTG-INT-12|
 
 ## Summary
+
 This control aims to assess the feasibility and simplicity of desoldering the BIOS/UEFI firmware chip and the Embedded Controller (EC) chip, if present. The objective is to evaluate the level of physical resistance against component removal.
 
 ## Test Objectives

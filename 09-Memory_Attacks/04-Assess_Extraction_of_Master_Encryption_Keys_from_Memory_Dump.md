@@ -1,13 +1,12 @@
 # Assess Extraction of Master Encryption Keys from Memory Dump
 
-| ID           |
-|--------------|
-| CHSTG-MEM-04 |
+|ID          |
+|------------|
+|CHSTG-MEM-04|
 
 ## Summary
+
 Once a memory dump has been acquired (via DMA, Cold Boot, or other methods), the focus shifts to forensic analysis to locate and extract cryptographic secrets. Volatile memory is a prime target because it frequently stores Full Disk Encryption (FDE) keys, such as the BitLocker Full Volume Encryption Key (FVEK) or LUKS master keys, in plain text to allow the processor to perform real-time encryption and decryption of disk traffic. This control evaluates the ability of an attacker to use forensic tools to retrieve these keys and subsequently decrypt the system's storage offline.
-
-
 
 ## Test Objectives
 * Analyze the physical memory dump to identify structures associated with BitLocker, LUKS, or other encryption providers.

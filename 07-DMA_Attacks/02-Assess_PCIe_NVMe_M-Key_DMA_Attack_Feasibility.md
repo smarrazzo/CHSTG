@@ -1,10 +1,11 @@
 # Assess PCIe NVMe (M-Key) DMA Attack Feasibility
 
-| ID           |
-|--------------|
-| CHSTG-DMA-02 |
+|ID          |
+|------------|
+|CHSTG-DMA-02|
 
 ## Summary
+
 This control evaluates the risk of Direct Memory Access (DMA) attacks through the M.2 NVMe (M-Key) slot. While typically internal, these slots are often accessible via maintenance hatches or during quick physical access scenarios. Because NVMe drives communicate directly over the PCIe bus, an attacker can replace the storage drive with a malicious DMA-capable device to read or write system memory. This attack is performed by "cold-plugging" the device while the system is powered off and then booting into the operating system.
 
 ## Test Objectives

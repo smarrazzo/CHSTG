@@ -5,6 +5,7 @@
 |CHSTG-FIRM-14|
 
 ## Summary
+
 This control aims to verify whether Secure Boot is properly enabled and enforced in the BIOS/UEFI configuration after obtaining firmware access (e.g., via CHSTG-FIRM-01 or CHSTG-FIRM-06 without firmware modification). The objective is to ensure that Secure Boot is activated and not configured in enrollment or permissive mode.
 
 ## Test Objectives

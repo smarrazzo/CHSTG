@@ -5,6 +5,7 @@
 |CHSTG-INFO-05|
 
 ## Summary
+
 This control aims to identify and collect the available firmware images and their versions using the device reference on the manufacturer’s website. The objective is to prepare later analysis steps by knowing which firmware versions exist for the device without interacting physically with the system.
 
 ## Test Objectives

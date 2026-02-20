@@ -5,6 +5,7 @@
 |CHSTG-BOOT-08|
 
 ## Summary
+
 This control aims to determine whether the system allows booting from the network during startup.
 
 ## Test Objectives

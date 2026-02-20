@@ -5,6 +5,7 @@
 |CHSTG-FIRM-08|
 
 ## Summary
+
 This control aims to verify whether PCIe anti-DMA protections are enabled in the BIOS/UEFI configuration after obtaining firmware access (e.g., via CHSTG-FIRM-01 or CHSTG-FIRM-06 without firmware modification). The objective is to determine whether protections against unauthorized DMA access are properly configured.
 
 ## Test Objectives

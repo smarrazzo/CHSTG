@@ -5,6 +5,7 @@
 |CHSTG-PHY-01|
 
 ## Summary
+
 This control aims to determine whether device disassembly screws are externally visible and whether they use standard screw types (e.g., Phillips M2.5). The objective is to assess the ease of physical access based solely on visual inspection.
 
 ## Test Objectives

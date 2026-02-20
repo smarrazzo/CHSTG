@@ -5,6 +5,7 @@
 |CHSTG-INT-05|
 
 ## Summary
+
 This control aims to determine whether the system storage (SSD) is soldered directly onto the motherboard or installed as a removable module. The objective is to assess the physical replaceability of the storage device.
 
 ## Test Objectives

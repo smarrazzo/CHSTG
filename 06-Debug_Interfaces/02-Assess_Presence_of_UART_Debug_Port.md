@@ -5,6 +5,7 @@
 |CHSTG-DEBUG-02|
 
 ## Summary
+
 This control aims to determine whether a dedicated UART debug port is present on the motherboard. Identification may be performed through schematic and boardview analysis or by direct visual inspection of the motherboard. The objective is to assess the exposure of UART-based debugging interfaces.
 
 ## Test Objectives

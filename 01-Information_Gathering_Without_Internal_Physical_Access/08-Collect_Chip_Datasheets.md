@@ -5,6 +5,7 @@
 |CHSTG-INFO-08|
 
 ## Summary
+
 This control aims to collect technical documentation (datasheets) of the components previously identified. The objective is to obtain the official electrical and functional specifications of each chip using publicly available documentation without interacting physically with the device.
 
 ## Test Objectives

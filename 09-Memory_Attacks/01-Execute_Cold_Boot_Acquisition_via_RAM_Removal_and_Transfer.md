@@ -1,13 +1,12 @@
 # Execute Cold Boot Acquisition via RAM Removal and Transfer
 
-| ID           |
-|--------------|
-| CHSTG-MEM-01 |
+|ID          |
+|------------|
+|CHSTG-MEM-01|
 
 ## Summary
+
 The "Cold Boot" attack exploits the physical property of DRAM, where data does not disappear instantly when power is removed. At room temperature, data remanence lasts only a few seconds, but by freezing the memory chips, the retention period can be extended to several minutes. This control evaluates the risk of an attacker physically removing the RAM modules from a running or recently powered-off system to dump their contents on a secondary machine, thereby bypassing OS-level memory protections and acquiring sensitive data like encryption keys or credentials.
-
-
 
 ## Test Objectives
 - Demonstrate data remanence in DRAM by lowering the operating temperature.

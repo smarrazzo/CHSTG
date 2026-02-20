@@ -5,6 +5,7 @@
 |CHSTG-FIRM-10|
 
 ## Summary
+
 This control aims to verify whether pre-boot DMA protection mechanisms are enabled in the BIOS/UEFI configuration after obtaining firmware access (e.g., via CHSTG-FIRM-01 or CHSTG-FIRM-06 without firmware modification). The objective is to determine whether DMA protections are enforced before the operating system loads.
 
 ## Test Objectives

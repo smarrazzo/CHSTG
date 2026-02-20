@@ -5,6 +5,7 @@
 |CHSTG-INT-11|
 
 ## Summary
+
 This control aims to identify the exact physical package type of the BIOS/UEFI firmware chip and the Embedded Controller (EC) chip, if present. The objective is to determine the chip packaging format for hardware analysis purposes.
 
 ## Test Objectives

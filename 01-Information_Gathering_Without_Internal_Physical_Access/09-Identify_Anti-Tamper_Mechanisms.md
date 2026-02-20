@@ -5,6 +5,7 @@
 |CHSTG-INFO-09|
 
 ## Summary
+
 This control aims to visually identify potential anti-tamper protections using publicly available high-resolution motherboard images and previously collected documentation. The objective is to determine whether the device includes physical intrusion detection or protection mechanisms without physically accessing the system.
 
 ## Test Objectives

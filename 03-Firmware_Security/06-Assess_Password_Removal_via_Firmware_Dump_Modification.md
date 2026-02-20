@@ -5,6 +5,7 @@
 |CHSTG-FIRM-06|
 
 ## Summary
+
 This control aims to assess whether the BIOS/UEFI password protection can be removed through firmware dump extraction and modification when physical access to the system is available.
 
 ## Test Objectives

@@ -5,6 +5,7 @@
 |CHSTG-INFO-03|
 
 ## Summary
+
 This control aims to locate schematic documentation of the motherboard using the exact board reference identified previously. The objective is to identify the existence and availability of logical circuit diagrams for later hardware analysis without performing any physical interaction with the device.
 
 ## Test Objectives

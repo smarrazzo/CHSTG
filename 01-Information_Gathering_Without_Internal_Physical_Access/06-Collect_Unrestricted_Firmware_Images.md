@@ -5,6 +5,7 @@
 |CHSTG-INFO-06|
 
 ## Summary
+
 This control aims to identify the existence of unrestricted firmware versions or documented methods allowing password removal. The objective is to prepare future analysis by determining whether access restrictions can be bypassed using publicly documented techniques, without interacting physically with the device.
 
 ## Test Objectives

@@ -5,6 +5,7 @@
 |CHSTG-BOOT-06|
 
 ## Summary
+
 This control aims to determine whether an ATA password is configured to protect access to the storage device during system startup.
 
 ## Test Objectives

@@ -1,13 +1,12 @@
 # Assess Extraction of Master Keys via TPM Traffic Analysis
 
-| ID           |
-|--------------|
-| CHSTG-TPM-02 |
+|ID          |
+|------------|
+|CHSTG-TPM-02|
 
 ## Summary
+
 Once the raw physical signals from the TPM bus (SPI or I2C) have been captured, the next step is to perform logical analysis to extract sensitive data. By decoding the communication protocol, an attacker can identify specific TPM commands and responses—such as those related to PCR (Platform Configuration Register) quotes or object unsealing—to intercept the cleartext disk encryption keys as they are transmitted to the CPU. This control evaluates the feasibility of converting captured waveforms into actionable cryptographic material.
-
-
 
 ## Test Objectives
 - Decode the captured SPI or I2C waveforms into human-readable hex data or TPM command structures.

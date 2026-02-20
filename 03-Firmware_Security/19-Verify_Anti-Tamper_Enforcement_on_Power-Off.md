@@ -5,6 +5,7 @@
 |CHSTG-FIRM-19|
 
 ## Summary
+
 This control aims to verify whether the firmware is configured to automatically power off the system upon detection of chassis opening after obtaining BIOS/UEFI access (e.g., via CHSTG-FIRM-01 or CHSTG-FIRM-06 without firmware modification). The objective is to determine whether active enforcement mechanisms are configured in response to physical intrusion detection.
 
 ## Test Objectives

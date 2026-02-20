@@ -1,10 +1,11 @@
 # Assess Privilege Escalation via DMA (root / NT AUTHORITY)
 
-| ID           |
-|--------------|
-| CHSTG-DMA-07 |
+|ID          |
+|------------|
+|CHSTG-DMA-07|
 
 ## Summary
+
 This control focuses on the final stage of a DMA-based attack: gaining full administrative control over the target operating system. By utilizing an existing kernel-mode injection (established in CHSTG-DMA-06), an attacker can bypass all standard authentication and authorization mechanisms. This leads to the execution of arbitrary commands as **NT AUTHORITY\SYSTEM** on Windows or **root** on Linux, representing a total compromise of the system's integrity and confidentiality.
 
 ## Test Objectives

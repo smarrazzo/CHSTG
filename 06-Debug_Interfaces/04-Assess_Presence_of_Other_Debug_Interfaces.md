@@ -5,6 +5,7 @@
 |CHSTG-DEBUG-04|
 
 ## Summary
+
 This control aims to determine whether additional debug interfaces are present on the motherboard beyond SPI, UART, or JTAG. Identification may be performed through schematic and boardview analysis or by direct visual inspection. The objective is to assess overall exposure of hardware-level debugging interfaces.
 
 ## Test Objectives

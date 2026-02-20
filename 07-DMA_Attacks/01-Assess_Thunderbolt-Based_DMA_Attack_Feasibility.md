@@ -1,10 +1,11 @@
 # Assess Thunderbolt-Based DMA Attack Feasibility
 
-| ID           |
-|--------------|
-| CHSTG-DMA-01 |
+|ID          |
+|------------|
+|CHSTG-DMA-01|
 
 ## Summary
+
 Thunderbolt interfaces provide external access to the high-speed PCIe bus. This control evaluates the feasibility of performing Direct Memory Access (DMA) attacks through these ports. By exploiting the plug-and-play nature of Thunderbolt, an attacker can connect a malicious device to read or write system memory without needing to disassemble the hardware. This is particularly critical when a device is left unattended in a sleep state (S3 or Modern Standby), as it may allow for the extraction of encryption keys or the injection of malicious code into the kernel.
 
 ## Test Objectives

@@ -5,6 +5,7 @@
 |CHSTG-FIRM-11|
 
 ## Summary
+
 This control aims to verify whether IOMMU-based protection mechanisms are enabled in the BIOS/UEFI configuration after obtaining firmware access (e.g., via CHSTG-FIRM-01 or CHSTG-FIRM-06 without firmware modification). The objective is to determine whether hardware-based DMA isolation is properly configured.
 
 ## Test Objectives

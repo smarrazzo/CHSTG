@@ -5,6 +5,7 @@
 |CHSTG-BOOT-02|
 
 ## Summary
+
 This control aims to determine whether the system is currently in a hibernation state by observing its behavior while having direct access to the device.
 
 ## Test Objectives

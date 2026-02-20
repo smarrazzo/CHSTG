@@ -5,6 +5,7 @@
 |CHSTG-FIRM-18|
 
 ## Summary
+
 This control aims to verify whether firmware-level anti-tamper mechanisms, such as chassis opening detection, are enabled after obtaining BIOS/UEFI access (e.g., via CHSTG-FIRM-01 or CHSTG-FIRM-06 without firmware modification). The objective is to determine whether the system detects and logs physical intrusion events.
 
 ## Test Objectives

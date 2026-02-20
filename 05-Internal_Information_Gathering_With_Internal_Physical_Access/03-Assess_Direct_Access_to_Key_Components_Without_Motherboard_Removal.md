@@ -5,6 +5,7 @@
 |CHSTG-INT-03|
 
 ## Summary
+
 This control aims to determine whether key components that could enable hardware-based attacks are directly accessible after removing only the device cover, without requiring full motherboard removal. The objective is to assess the level of protection provided by the device internal layout.
 
 ## Test Objectives

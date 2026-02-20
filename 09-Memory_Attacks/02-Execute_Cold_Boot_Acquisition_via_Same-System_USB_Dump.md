@@ -1,13 +1,12 @@
 # Execute Cold Boot Acquisition via Same-System USB Dump
 
-| ID           |
-|--------------|
-| CHSTG-MEM-02 |
+|ID          |
+|------------|
+|CHSTG-MEM-02|
 
 ## Summary
+
 This control evaluates the feasibility of performing a cold boot attack without moving the RAM modules to a different machine. By physically cooling the RAM to extreme temperatures, an attacker can force a reboot and boot the same system into a specialized USB environment to dump the memory contents. This technique is often used when RAM is difficult to remove or when a secondary compatible system is unavailable. A critical hurdle in this attack is the BIOS/UEFI "Memory Overwrite Request" (MOR), which must be bypassed or patched to prevent the firmware from wiping the RAM during the boot sequence.
-
-
 
 ## Test Objectives
 - Demonstrate that memory data persists across a warm or cold reboot when the RAM is sufficiently cooled.

@@ -5,6 +5,7 @@
 |CHSTG-INFO-13|
 
 ## Summary
+
 This control aims to determine whether the device includes a USB4 port using external visual inspection and publicly available commercial and technical documentation. The objective is to confirm the presence of this interface without physically interacting with the system.
 
 ## Test Objectives

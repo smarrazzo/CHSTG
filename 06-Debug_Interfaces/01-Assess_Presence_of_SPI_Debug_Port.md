@@ -20,7 +20,6 @@ Je veux un dossier comme ça :
 
 ....
 
-
 dans chaque fichier MD de controle je veux 
 
 # Title
@@ -33,7 +32,6 @@ dans chaque fichier MD de controle je veux
 ## Test Objectives
 ## How to Test
 ## Remediation
-
 
 le tout en anglai 
 
@@ -55,7 +53,6 @@ Chaque fichier de contrôle contient exactement le template Markdown en anglais 
 Le JSON utilisé est celui que tu as fourni : 
 chstg_full_v1.0
 
-
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
@@ -65,11 +62,9 @@ import unicodedata
 from pathlib import Path
 from typing import Dict, List, Any
 
-
 # ---- Config ----
 JSON_PATH = Path("/mnt/data/chstg_full_v1.0.json")   # <-- ton fichier :contentReference[oaicite:1]{index=1}
 OUTPUT_DIR = Path("CHSTG")                          # dossier de sortie (créé si absent)
-
 
 # ---- Helpers ----
 def slugify_filename(text: str, max_len: int = 120) -> str:
@@ -87,7 +82,6 @@ def slugify_filename(text: str, max_len: int = 120) -> str:
         text = "Untitled"
     return text[:max_len]
 
-
 def md_control_template(title: str, control_id: str) -> str:
     return f"""# {title}
 
@@ -104,11 +98,9 @@ def md_control_template(title: str, control_id: str) -> str:
 ## Remediation
 """
 
-
 def write_text(path: Path, content: str) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(content, encoding="utf-8")
-
 
 def main() -> None:
     if not JSON_PATH.exists():
@@ -188,7 +180,6 @@ def main() -> None:
 
     print(f"Done. Output written to: {OUTPUT_DIR.resolve()}")
 
-
 if __name__ == "__main__":
     main()
 Utilisation
@@ -196,7 +187,6 @@ python3 generate_chstg_md.py
 Ça crée un dossier CHSTG/ avec l’arborescence demandée.
 
 Si tu veux aussi générer, dans chaque README.md, des sections “Summary / Scope / References” (à partir des champs description, guidance, tags, etc.), dis-moi et je te fais la variante (toujours en anglais).
-
 
 Sources
 
@@ -230,7 +220,6 @@ Constraints (optionnel): (ex: “keep it short”, “include commands”, “me
 
 Dès que tu m’envoies le premier, je le complète.
 
-
 Vous avez dit :
 Control ID: CHSTG-INFO-01
 
@@ -238,7 +227,6 @@ Title: Identify System Model and Hardware Revision
 
 Notes / Idea (FR ou EN):
 Identifier le model du poste en utilisant les information gravé sur le poste, en utilisant ses informations, utiliser les different moteur de recherche pour determiner le nom exate du model, les référence de la carte mère permétant d'en identifier les fichier Boardview etc ....
-
 
 Constraints : Ne t'ecarte pas de mes idées
 
@@ -252,6 +240,7 @@ Voici le fichier complété en anglais, en restant strictement dans ton idée :
 |CHSTG-INFO-01|
 
 ## Summary
+
 This control aims to identify the exact system model and hardware revision by examining the physical markings present on the device. The collected information is then used with search engines to determine the precise model name, motherboard references, and associated technical resources such as boardview files.
 
 ## Test Objectives
@@ -296,7 +285,6 @@ Title: Identify System Model and Hardware Revision
 Notes / Idea (FR ou EN):
 Identifier le model du poste en utilisant les information gravé sur le poste, en utilisant ses informations, utiliser les different moteur de recherche pour determiner le nom exate du model, les référence de la carte mère permétant d'en identifier les fichier Boardview etc ....
 
-
 Constraints : Ne t'ecarte pas de mes idées, ici il n'est pas question de démonter le poste, c'est une observation externe.
 
 ChatGPT a dit :
@@ -309,6 +297,7 @@ Voici la version corrigée en respectant strictement ta contrainte observation e
 |CHSTG-INFO-01|
 
 ## Summary
+
 This control aims to identify the exact system model and hardware revision using only the information physically visible on the device. The visible markings are then used with search engines to determine the precise model name, motherboard references, and related technical resources such as boardview files.
 
 ## Test Objectives
@@ -351,7 +340,6 @@ Title: Identify System Model and Hardware Revision
 Notes / Idea (FR ou EN):
 Identifier le model du poste en utilisant les information gravé sur le poste, en utilisant ses informations, utiliser les different moteur de recherche pour determiner le nom exate du model, les référence de la carte mère permétant d'en identifier les fichier Boardview etc ....
 
-
 Constraints : Ne t'ecarte pas de mes idées, ici il n'est pas question de démonter le poste, c'est une observation externe. ce n'est pas ici qu'on cherche les fichier technique ce test n'est que sur l'identification.
 Pour la remédiation nous somme sur des poste acheté sur étagère, si il n'existe pas de remédiation n'en propose pas 
 
@@ -371,6 +359,7 @@ pas de remédiation proposée (car non applicable)
 |CHSTG-INFO-01|
 
 ## Summary
+
 This control aims to identify the exact system model and hardware revision using only the information physically visible on the device. The purpose of this step is strictly identification and collection of hardware references.
 
 ## Test Objectives
@@ -409,7 +398,6 @@ Par exemple
 
 la recherche HP 430 G6 Motherboard permet de derterminer exactement le model de la carte mère DA0X8IMB8E0 etc....
 
-
 Constraints : Ne t'ecarte pas de mes idées, ici il n'est pas question de démonter le poste, c'est une observation externe. ce n'est pas ici qu'on cherche les fichier technique ce test n'est que sur l'identification.
 Pour la remédiation nous somme sur des poste acheté sur étagère, si il n'existe pas de remédiation n'en propose pas 
 
@@ -423,6 +411,7 @@ Voici le contrôle enrichi avec ton exemple, tout en restant strictement sur l�
 |CHSTG-INFO-01|
 
 ## Summary
+
 This control aims to identify the exact system model and hardware revision using only the information physically visible on the device. The purpose of this step is strictly the identification and collection of hardware references that will be used in later analysis phases.
 
 ## Test Objectives
@@ -468,9 +457,6 @@ Par exemple
 
 la recherche "hp 440 g7 disassembly" sur youtube permet d'obtenir une video explicative https://www.youtube.com/watch?v=vmipNT6FMMA et même une vidéo officiel de HP https://www.youtube.com/watch?v=2FG1abY5OYg.
 
-
-
-
 Constraints : Ne t'ecarte pas de mes idées, ici il n'est pas question de démonter le poste, c'est une phase d'osint préparatoire.
 
 ChatGPT a dit :
@@ -483,6 +469,7 @@ Voici le contrôle rédigé en respectant ton idée : phase OSINT préparatoire 
 |CHSTG-INFO-02|
 
 ## Summary
+
 This control consists of collecting publicly available documentation describing how the device can be disassembled. The objective is to prepare future hardware analysis steps by understanding the opening procedure without performing any physical action on the device.
 
 ## Test Objectives
@@ -527,6 +514,7 @@ Voici le contrôle mis à jour avec l’objectif d’identification de contre-me
 |CHSTG-INFO-02|
 
 ## Summary
+
 This control consists of collecting publicly available documentation describing how the device can be disassembled. The objective is to prepare future hardware analysis steps by understanding the opening procedure without performing any physical action on the device.
 
 ## Test Objectives
@@ -572,10 +560,6 @@ Title: Collect Board Schematic Documentation
 Notes / Idea (FR ou EN):
 Avec la réference exacte de la carte mère identifier avec le test CHSTG-INFO-01 rechercher avec le mot clé "Schematic" permet d'identifier les fichier contenant le schéma logic de la carte mere du poste, attention ses fichier sont souvent payant.  ou nessécite  des acces VIP.
 
-
-
-
-
 Constraints : Ne t'ecarte pas de mes idées, ici il n'est pas question de démonter le poste, c'est une phase d'osint préparatoire.
 
 ChatGPT a dit :
@@ -588,6 +572,7 @@ Voici le contrôle rédigé en respectant strictement ton idée : OSINT prépara
 |CHSTG-INFO-03|
 
 ## Summary
+
 This control aims to locate schematic documentation of the motherboard using the exact board reference identified previously. The objective is to identify the existence and availability of logical circuit diagrams for later hardware analysis without performing any physical interaction with the device.
 
 ## Test Objectives
@@ -626,10 +611,6 @@ Title: Collect Board-View Documentation
 Notes / Idea (FR ou EN):
 Avec la réference exacte de la carte mère identifier avec le test CHSTG-INFO-01 rechercher avec le mot clé "boardview" permet d'identifier les fichier contenant le schéma physique de la carte mere du poste, attention ses fichier sont souvent payant.  ou nessécite  des acces VIP.
 
-
-
-
-
 Constraints : Ne t'ecarte pas de mes idées, ici il n'est pas question de démonter le poste, c'est une phase d'osint préparatoire.
 
 ChatGPT a dit :
@@ -642,6 +623,7 @@ Voici le contrôle correspondant, toujours dans la logique OSINT préparatoire u
 |CHSTG-INFO-04|
 
 ## Summary
+
 This control aims to locate boardview documentation of the motherboard using the exact board reference identified previously. The objective is to identify the existence and availability of the physical layout files of the motherboard for later hardware analysis without performing any physical interaction with the device.
 
 ## Test Objectives
@@ -680,10 +662,6 @@ Title: Collect Firmware Images
 Notes / Idea (FR ou EN):
 Avec la référence du poste identifier les differente images et leur version du firmware sur le site constructeur.
 
-
-
-
-
 Constraints : Ne t'ecarte pas de mes idées, ici il n'est pas question de démonter le poste, c'est une phase d'osint préparatoire.
 
 ChatGPT a dit :
@@ -696,6 +674,7 @@ Voici le contrôle rédigé en restant strictement sur ton idée : récupératio
 |CHSTG-INFO-05|
 
 ## Summary
+
 This control aims to identify and collect the available firmware images and their versions using the device reference on the manufacturer’s website. The objective is to prepare later analysis steps by knowing which firmware versions exist for the device without interacting physically with the system.
 
 ## Test Objectives
@@ -737,10 +716,6 @@ trouver des firmware débrider comporte des risques car il ne correspond pas exa
 Privilegier les moethode de suppéssion de mots de passe a a partir du firmware du poste.
 PAr exemple pour Les ordinateur HP probook : https://gist.github.com/schorschii/752b3a06f7bc3b33ce7b65ff22c27337
 
-
-
-
-
 Constraints : Ne t'ecarte pas de mes idées, ici il n'est pas question de démonter le poste, c'est une phase d'osint préparatoire.
 
 ChatGPT a dit :
@@ -753,6 +728,7 @@ Voici le contrôle rédigé en restant fidèle à ton idée : recherche OSINT de
 |CHSTG-INFO-06|
 
 ## Summary
+
 This control aims to identify the existence of unrestricted firmware versions or documented methods allowing password removal. The objective is to prepare future analysis by determining whether access restrictions can be bypassed using publicly documented techniques, without interacting physically with the device.
 
 ## Test Objectives
@@ -796,8 +772,6 @@ L'identification peux être faite soit, avec des photos haute résolution de la 
 soit depuis le fichier boardview
 soit depuis le fichier schématic.
 
-
-
 Constraints : Ne t'ecarte pas de mes idées, ici il n'est pas question de démonter le poste, c'est une phase d'osint préparatoire.
 
 ChatGPT a dit :
@@ -810,6 +784,7 @@ Voici le contrôle rédigé en respectant ton idée : identification des puces u
 |CHSTG-INFO-07|
 
 ## Summary
+
 This control aims to identify key internal components such as the BIOS/UEFI chip, the embedded controller, and the TPM chip using publicly available documentation. The identification is performed using high-resolution motherboard images, boardview files, or schematic files without physically accessing the device.
 
 ## Test Objectives
@@ -848,8 +823,6 @@ recherche avec le mot clé "datasheet"
 
 Par exemple W25Q128 une référence très courante comme composant de stotackage bios/ UEFI  et ça datasheet associé https://www.winbond.com/resource-files/w25q128jv%20revf%2003272018%20plus.pdf
 
-
-
 Constraints : Ne t'ecarte pas de mes idées, ici il n'est pas question de démonter le poste, c'est une phase d'osint préparatoire.
 
 ChatGPT a dit :
@@ -862,6 +835,7 @@ Voici le contrôle rédigé conformément à ton idée : recherche OSINT des dat
 |CHSTG-INFO-08|
 
 ## Summary
+
 This control aims to collect technical documentation (datasheets) of the components previously identified. The objective is to obtain the official electrical and functional specifications of each chip using publicly available documentation without interacting physically with the device.
 
 ## Test Objectives
@@ -896,7 +870,6 @@ Notes / Idea (FR ou EN):
 utiliser des image de haute resolution des site de revente de piece détaché pour identifier visuelement la présence de protéction anti tamper.
 les information receuilli dans CHSTG-INFO-09 peuvent aussi permetre de vérifier la présence de protection.
 
-
 Constraints : Ne t'ecarte pas de mes idées, ici il n'est pas question de démonter le poste, c'est une phase d'osint préparatoire.
 
 ChatGPT a dit :
@@ -909,6 +882,7 @@ Voici le contrôle rédigé, en restant strictement dans ton idée : identificat
 |CHSTG-INFO-09|
 
 ## Summary
+
 This control aims to visually identify potential anti-tamper protections using publicly available high-resolution motherboard images and previously collected documentation. The objective is to determine whether the device includes physical intrusion detection or protection mechanisms without physically accessing the system.
 
 ## Test Objectives
@@ -944,7 +918,6 @@ Title: Assess Thunderbolt 2 Presence
 Notes / Idea (FR ou EN):
 Vérification visuel et via les documentations commercial et technique du poste la pésence prort Thunderbolt 2 
 
-
 Constraints : Ne t'ecarte pas de mes idées, ici il n'est pas question de démonter le poste, c'est une phase d'osint préparatoire.
 
 ChatGPT a dit :
@@ -957,6 +930,7 @@ Voici le contrôle rédigé en restant fidèle à ton idée : vérification visu
 |CHSTG-INFO-10|
 
 ## Summary
+
 This control aims to determine whether the device includes a Thunderbolt 2 port using external visual inspection and publicly available commercial and technical documentation. The objective is to confirm the presence of this interface without physically interacting with the system.
 
 ## Test Objectives
@@ -992,7 +966,6 @@ Title: Assess Thunderbolt 2 Presence
 Notes / Idea (FR ou EN):
 Vérification visuel et via les documentations commercial et technique du poste la pésence prort Thunderbolt 3 
 
-
 Constraints : Ne t'ecarte pas de mes idées, ici il n'est pas question de démonter le poste, c'est une phase d'osint préparatoire.
 
 ChatGPT a dit :
@@ -1005,6 +978,7 @@ Voici le contrôle corrigé (Thunderbolt 3) en restant fidèle à ton idée : ob
 |CHSTG-INFO-11|
 
 ## Summary
+
 This control aims to determine whether the device includes a Thunderbolt 3 port using external visual inspection and publicly available commercial and technical documentation. The objective is to confirm the presence of this interface without physically interacting with the system.
 
 ## Test Objectives
@@ -1040,7 +1014,6 @@ Title: Assess Thunderbolt 4 Presence
 Notes / Idea (FR ou EN):
 Vérification visuel et via les documentations commercial et technique du poste la pésence prort Thunderbolt 4 
 
-
 Constraints : Ne t'ecarte pas de mes idées, ici il n'est pas question de démonter le poste, c'est une phase d'osint préparatoire.
 
 ChatGPT a dit :
@@ -1053,6 +1026,7 @@ Voici le contrôle correspondant pour Thunderbolt 4, toujours basé uniquement s
 |CHSTG-INFO-12|
 
 ## Summary
+
 This control aims to determine whether the device includes a Thunderbolt 4 port using external visual inspection and publicly available commercial and technical documentation. The objective is to confirm the presence of this interface without physically interacting with the system.
 
 ## Test Objectives
@@ -1088,7 +1062,6 @@ Title: Assess USB4 Presence
 Notes / Idea (FR ou EN):
 Vérification visuel et via les documentations commercial et technique du poste la pésence prort USB4
 
-
 Constraints : Ne t'ecarte pas de mes idées, ici il n'est pas question de démonter le poste, c'est une phase d'osint préparatoire.
 
 ChatGPT a dit :
@@ -1101,6 +1074,7 @@ Voici le contrôle correspondant pour USB4, toujours basé uniquement sur observ
 |CHSTG-INFO-13|
 
 ## Summary
+
 This control aims to determine whether the device includes a USB4 port using external visual inspection and publicly available commercial and technical documentation. The objective is to confirm the presence of this interface without physically interacting with the system.
 
 ## Test Objectives
@@ -1148,6 +1122,7 @@ Voici le contrôle correspondant pour FireWire, toujours en phase OSINT par obse
 |CHSTG-INFO-14|
 
 ## Summary
+
 This control aims to determine whether the device includes a FireWire port using external visual inspection and publicly available commercial and technical documentation. The objective is to confirm the presence of this interface without physically interacting with the system.
 
 ## Test Objectives
@@ -1193,6 +1168,7 @@ Voici le contrôle correspondant pour PCMCIA, toujours en phase OSINT par observ
 |CHSTG-INFO-15|
 
 ## Summary
+
 This control aims to determine whether the device includes a PCMCIA slot using external visual inspection and publicly available commercial and technical documentation. The objective is to confirm the presence of this interface without physically interacting with the system.
 
 ## Test Objectives
@@ -1238,6 +1214,7 @@ Voici le contrôle rédigé en restant simple et fidèle à ton idée : vérifie
 |CHSTG-BOOT-01|
 
 ## Summary
+
 This control aims to determine whether the system is currently in a sleep state by observing its behavior while having direct access to the device.
 
 ## Test Objectives
@@ -1284,6 +1261,7 @@ Voici le contrôle correspondant pour l’état hibernation, toujours simple et 
 |CHSTG-BOOT-02|
 
 ## Summary
+
 This control aims to determine whether the system is currently in a hibernation state by observing its behavior while having direct access to the device.
 
 ## Test Objectives
@@ -1323,6 +1301,7 @@ Voici la version mise à jour :
 |CHSTG-BOOT-02|
 
 ## Summary
+
 This control aims to determine whether the system is currently in a hibernation state by observing its behavior while having direct access to the device.
 
 ## Test Objectives
@@ -1367,6 +1346,7 @@ Voici la version mise à jour du contrôle avec remédiation, toujours fidèle �
 |CHSTG-BOOT-01|
 
 ## Summary
+
 This control aims to determine whether the system is currently in a sleep state by observing its behavior while having direct access to the device.
 
 ## Test Objectives
@@ -1413,6 +1393,7 @@ Voici le contrôle rédigé en restant fidèle à ton idée : vérifier si le sy
 |CHSTG-BOOT-03|
 
 ## Summary
+
 This control aims to determine whether the system automatically boots to the login screen without requiring any user interaction, such as a disk decryption PIN or pre-boot authentication.
 
 ## Test Objectives
@@ -1457,6 +1438,7 @@ Voici le contrôle rédigé simplement et fidèle à ton idée : vérifier la pr
 |CHSTG-BOOT-05|
 
 ## Summary
+
 This control aims to determine whether a security PIN code is required during system startup before the operating system loads.
 
 ## Test Objectives
@@ -1496,6 +1478,7 @@ Voici le contrôle correspondant, fidèle à ton idée : vérifier la présence 
 |CHSTG-BOOT-06|
 
 ## Summary
+
 This control aims to determine whether an ATA password is configured to protect access to the storage device during system startup.
 
 ## Test Objectives
@@ -1520,7 +1503,6 @@ Vous avez dit :
 Control ID: CHSTG-BOOT-07
 Title: Assess Alternative Boot Options (CD/DVD, USB)
 
-
 Notes / Idea (FR ou EN):
 Vérifier la possibiliter de choisir un autre périphérique d'amorcage 
 
@@ -1536,6 +1518,7 @@ Voici le contrôle rédigé fidèlement à ton idée : vérifier la possibilité
 |CHSTG-BOOT-07|
 
 ## Summary
+
 This control aims to determine whether the system allows booting from alternative devices such as CD/DVD or USB during startup.
 
 ## Test Objectives
@@ -1565,7 +1548,6 @@ Vous avez dit :
 Control ID: CHSTG-BOOT-08
 Title: Assess Network Boot Accessibility
 
-
 Notes / Idea (FR ou EN):
 Vérifier la possibiliter de démarrer via le réseau
 
@@ -1581,6 +1563,7 @@ Voici le contrôle correspondant, fidèle à ton idée : vérifier la possibilit
 |CHSTG-BOOT-08|
 
 ## Summary
+
 This control aims to determine whether the system allows booting from the network during startup.
 
 ## Test Objectives
@@ -1609,10 +1592,8 @@ Vous avez dit :
 Control ID: CHSTG-BOOT-04
 Title: Assess Fast Boot Configuration
 
-
 Notes / Idea (FR ou EN):
 propose 
-
 
 Constraints : Ne t'ecarte pas de mes idées, ici il n'est pas question de démonter le poste, ici on a acces au poste, les remédiation existe.
 
@@ -1626,6 +1607,7 @@ Voici une proposition cohérente avec les autres contrôles BOOT : vérifier si 
 |CHSTG-BOOT-04|
 
 ## Summary
+
 This control aims to determine whether the system uses a fast boot mechanism that reduces or skips parts of the standard initialization process during startup.
 
 ## Test Objectives
@@ -1655,11 +1637,9 @@ Vous avez dit :
 Control ID: CHSTG-FIRM-01
 Title: Assess BIOS/UEFI User-Level Access
 
-
 Notes / Idea (FR ou EN):
 l'idée ici est de vérifier si il est possible d'accéder au information de conficguration du BIOS sans avoir à s'autentifier.
 Un acces en lecture seul, permétant d'obtenir des information comme l'activation de protection anti-tamper ou anti-dma etc ....
-
 
 Constraints : Ne t'ecarte pas de mes idées, ici il n'est pas question de démonter le poste, ici on a acces au poste, les remédiation existe.
 
@@ -1673,6 +1653,7 @@ Voici le contrôle rédigé en restant strictement fidèle à ton idée : vérif
 |CHSTG-FIRM-01|
 
 ## Summary
+
 This control aims to determine whether BIOS/UEFI configuration information can be accessed without authentication. The objective is to verify if a read-only access is possible and whether security-related settings can be viewed without requiring credentials.
 
 ## Test Objectives
@@ -1707,11 +1688,9 @@ Vous avez dit :
 Control ID: CHSTG-FIRM-02
 Title: Assess BIOS/UEFI Administrator-Level Access
 
-
 Notes / Idea (FR ou EN):
 l'idée ici est de vérifier si il est possible d'accesder a la conficguration du BIOS sans avoir à s'autentifier.
 Verifier la présence d'un mots de passe pour modifier les paramètre du bios.
-
 
 Constraints : Ne t'ecarte pas de mes idées, ici il n'est pas question de démonter le poste, ici on a acces au poste, les remédiation existe.
 
@@ -1725,6 +1704,7 @@ Voici le contrôle rédigé en restant strictement dans ton idée : vérifier l�
 |CHSTG-FIRM-02|
 
 ## Summary
+
 This control aims to determine whether BIOS/UEFI configuration settings can be modified without authentication. The objective is to verify the presence of an administrator password protecting firmware configuration changes.
 
 ## Test Objectives
@@ -1756,10 +1736,8 @@ Vous avez dit :
 Control ID: CHSTG-FIRM-03
 Title: Verify BIOS/UEFI Boot Password Protection
 
-
 Notes / Idea (FR ou EN):
 l'idée est de vérifier la présence d'un mot de passe BIOS au Boot.
-
 
 Constraints : Ne t'ecarte pas de mes idées, ici il n'est pas question de démonter le poste, ici on a acces au poste, les remédiation existe.
 
@@ -1773,6 +1751,7 @@ Voici le contrôle rédigé strictement selon ton idée : vérifier la présence
 |CHSTG-FIRM-03|
 
 ## Summary
+
 This control aims to determine whether a BIOS/UEFI boot password is required during system startup before the operating system begins loading.
 
 ## Test Objectives
@@ -1798,10 +1777,8 @@ Vous avez dit :
 Control ID: CHSTG-FIRM-04
 Title: Check for Default BIOS/UEFI Passwords
 
-
 Notes / Idea (FR ou EN):
 Bien qu'il y ai un mot de passe pour acceder au bios, l'idée est de vérifier si le mot de passe n'est pas un mots de passe par défaut comme 123456, admin etc .....
-
 
 Constraints : Ne t'ecarte pas de mes idées, ici il n'est pas question de démonter le poste, ici on a acces au poste, les remédiation existe.
 
@@ -1815,6 +1792,7 @@ Voici le contrôle rédigé en restant strictement dans ton idée : vérifier si
 |CHSTG-FIRM-04|
 
 ## Summary
+
 This control aims to determine whether the BIOS/UEFI password configured on the system corresponds to a default or weak password (e.g., "123456", "admin", etc.).
 
 ## Test Objectives
@@ -1846,7 +1824,6 @@ Vous avez dit :
 Control ID: CHSTG-FIRM-05
 Title: Check for Factory BIOS/UEFI Passwords
 
-
 Notes / Idea (FR ou EN):
 Vérifier si il existe un mots de passe constructeur permétant de bypass la protection mis en place.
 
@@ -1864,6 +1841,7 @@ Voici le contrôle rédigé en restant fidèle à ton idée : vérifier l’exis
 |CHSTG-FIRM-05|
 
 ## Summary
+
 This control aims to determine whether a manufacturer factory password exists that could bypass the configured BIOS/UEFI protection.
 
 ## Test Objectives
@@ -1894,7 +1872,6 @@ Vous avez dit :
 Control ID: CHSTG-FIRM-06
 Title: Assess Password Removal via Firmware Dump Modification
 
-
 Notes / Idea (FR ou EN):
 Supprimer le mots de passe via une modification du bios
 
@@ -1911,7 +1888,6 @@ etapes clé :
 ref :
 - CH341 (~15€) : https://www.google.com/search?q=ch341&ie=UTF-8
 - Xgecu (~350€): http://www.xgecu.com/
-
 
 Example:
 For HP ProBook systems, documented methods exist:
@@ -1930,6 +1906,7 @@ Voici une version rédigée qui reste fidèle à ton idée au niveau d’évalua
 |CHSTG-FIRM-06|
 
 ## Summary
+
 This control aims to assess whether the BIOS/UEFI password protection could be removed through firmware dump modification techniques. The objective is to evaluate the risk exposure associated with firmware-level password bypass methods.
 
 ## Test Objectives
@@ -1966,11 +1943,9 @@ Enable firmware protections that prevent unauthorized firmware rewriting, such a
 - Physical or logical SPI write protection settings
 Si tu veux, on peut créer un contrôle séparé orienté “Assess SPI Write Protection Configuration”, qui resterait purement défensif et aligné sécurité.
 
-
 Vous avez dit :
 Control ID: CHSTG-FIRM-06
 Title: Assess Password Removal via Firmware Dump Modification
-
 
 Notes / Idea (FR ou EN):
 Supprimer le mots de passe via une modification du bios
@@ -1988,7 +1963,6 @@ etapes clé :
 ref :
 - CH341 (~15€) : https://www.google.com/search?q=ch341&ie=UTF-8
 - Xgecu (~350€): http://www.xgecu.com/
-
 
 Example:
 For HP ProBook systems, documented methods exist:
@@ -2008,6 +1982,7 @@ Voici une version rédigée qui reste fidèle à ton idée (évaluer le risque d
 |CHSTG-FIRM-06|
 
 ## Summary
+
 This control aims to assess whether the BIOS/UEFI password protection can be removed through firmware dump extraction and modification. The objective is to evaluate the exposure of the device to firmware-level password bypass techniques when physical access to the system is available.
 
 ## Test Objectives
@@ -2042,7 +2017,6 @@ Vous avez dit :
 Control ID: CHSTG-FIRM-06
 Title: Assess Password Removal via Firmware Dump Modification
 
-
 Notes / Idea (FR ou EN):
 Supprimer le mots de passe via une modification du bios
 
@@ -2059,7 +2033,6 @@ etapes clé :
 ref :
 - CH341 (~15€) : https://www.google.com/search?q=ch341&ie=UTF-8
 - Xgecu (~350€): http://www.xgecu.com/
-
 
 Example:
 For HP ProBook systems, documented methods exist:
@@ -2080,6 +2053,7 @@ Voici une version fidèle à ton idée, incluant les équipements mentionnés, m
 |CHSTG-FIRM-06|
 
 ## Summary
+
 This control aims to assess whether the BIOS/UEFI password protection can be removed through firmware dump extraction and modification when physical access to the system is available.
 
 ## Test Objectives
@@ -2118,7 +2092,6 @@ Vous avez dit :
 Control ID: CHSTG-FIRM-07
 Title: Assess Password Removal via Unlocked Firmware Image
 
-
 Notes / Idea (FR ou EN):
 Supprimer le mots de passe via l'utilisation d'une image de firmware débloqué identifié en CHSTG-INFO-06
 
@@ -2133,7 +2106,6 @@ etapes clé :
 ref :
 - CH341 (~15€) : https://www.google.com/search?q=ch341&ie=UTF-8
 - Xgecu (~350€): http://www.xgecu.com/
-
 
 Constraints : Ne t'ecarte pas de mes idées, ici il n'est pas question de démonter le poste, ici on a acces au poste.
 Si je donne des exemple d'equipement je veux qu'il apparaise.
@@ -2150,6 +2122,7 @@ Voici une version conforme à ton idée, structurée comme une évaluation de ri
 |CHSTG-FIRM-07|
 
 ## Summary
+
 This control aims to assess whether the BIOS/UEFI password protection can be bypassed by flashing an unlocked firmware image previously identified during CHSTG-INFO-06. The objective is to evaluate the exposure of the device to firmware replacement attacks when physical access is available.
 
 ## Test Objectives
@@ -2210,6 +2183,7 @@ Voici le contrôle rédigé strictement selon ton idée : vérification des prot
 |CHSTG-FIRM-08|
 
 ## Summary
+
 This control aims to verify whether PCIe anti-DMA protections are enabled in the BIOS/UEFI configuration after obtaining firmware access (e.g., via CHSTG-FIRM-01 or CHSTG-FIRM-06 without firmware modification). The objective is to determine whether protections against unauthorized DMA access are properly configured.
 
 ## Test Objectives
@@ -2265,6 +2239,7 @@ Voici le contrôle rédigé strictement selon ton idée : vérification des prot
 |CHSTG-FIRM-09|
 
 ## Summary
+
 This control aims to verify whether Thunderbolt and/or USB4 anti-DMA protections are enabled in the BIOS/UEFI configuration after obtaining firmware access (e.g., via CHSTG-FIRM-01 or CHSTG-FIRM-06 without firmware modification). The objective is to determine whether protections against unauthorized DMA access through external high-speed interfaces are properly configured.
 
 ## Test Objectives
@@ -2318,6 +2293,7 @@ Voici le contrôle rédigé conformément à ton idée : vérification spécifiq
 |CHSTG-FIRM-10|
 
 ## Summary
+
 This control aims to verify whether pre-boot DMA protection mechanisms are enabled in the BIOS/UEFI configuration after obtaining firmware access (e.g., via CHSTG-FIRM-01 or CHSTG-FIRM-06 without firmware modification). The objective is to determine whether DMA protections are enforced before the operating system loads.
 
 ## Test Objectives
@@ -2372,6 +2348,7 @@ Voici le contrôle rédigé strictement selon ton idée : vérification des prot
 |CHSTG-FIRM-13|
 
 ## Summary
+
 This control aims to verify whether anti–cold boot protections are enabled in the BIOS/UEFI configuration after obtaining firmware access (e.g., via CHSTG-FIRM-01 or CHSTG-FIRM-06 without firmware modification). The objective is to determine whether memory protection mechanisms are configured to mitigate cold boot attacks.
 
 ## Test Objectives
@@ -2410,7 +2387,6 @@ Apres avoir obtenu des acces au bios sans modification du bios (typiquement CHST
 
 Le secure boot doit être activé et limité (ne pas être en mode enrolement)
 
-
 Constraints : Ne t'ecarte pas de mes idées, ici il n'est pas question de démonter le poste, ici on a acces au poste.
 Si je donne des exemple d'equipement je veux qu'il apparaise, des remédiation existe.
 
@@ -2424,6 +2400,7 @@ Voici le contrôle rédigé strictement selon ton idée : vérification de Secur
 |CHSTG-FIRM-14|
 
 ## Summary
+
 This control aims to verify whether Secure Boot is properly enabled and enforced in the BIOS/UEFI configuration after obtaining firmware access (e.g., via CHSTG-FIRM-01 or CHSTG-FIRM-06 without firmware modification). The objective is to ensure that Secure Boot is activated and not configured in enrollment or permissive mode.
 
 ## Test Objectives
@@ -2462,7 +2439,6 @@ Apres avoir obtenu des acces au bios sans modification du bios (typiquement CHST
 - VT-d
 - AMD-vi
 
-
 Constraints : Ne t'ecarte pas de mes idées, ici il n'est pas question de démonter le poste, ici on a acces au poste.
 Si je donne des exemple d'equipement je veux qu'il apparaise, des remédiation existe.
 
@@ -2476,6 +2452,7 @@ Voici le contrôle rédigé strictement selon ton idée : vérification de l’a
 |CHSTG-FIRM-11|
 
 ## Summary
+
 This control aims to verify whether IOMMU-based protection mechanisms are enabled in the BIOS/UEFI configuration after obtaining firmware access (e.g., via CHSTG-FIRM-01 or CHSTG-FIRM-06 without firmware modification). The objective is to determine whether hardware-based DMA isolation is properly configured.
 
 ## Test Objectives
@@ -2527,6 +2504,7 @@ Voici le contrôle rédigé strictement selon ton idée : vérification de l’a
 |CHSTG-FIRM-16|
 
 ## Summary
+
 This control aims to verify whether hardware virtualization features are enabled in the BIOS/UEFI configuration after obtaining firmware access (e.g., via CHSTG-FIRM-01 or CHSTG-FIRM-06 without firmware modification). The objective is to determine whether processor-level virtualization support is activated.
 
 ## Test Objectives
@@ -2578,6 +2556,7 @@ Voici une version fidèle à ton idée, rédigée comme évaluation de risque, i
 |CHSTG-FIRM-17|
 
 ## Summary
+
 This control aims to assess whether firmware security protections can be disabled without knowing the BIOS/UEFI administrator password by directly modifying firmware NVRAM variables within a firmware dump. The objective is to evaluate the exposure of firmware-level protections to direct manipulation attacks when physical access to the system is available.
 
 ## Test Objectives
@@ -2624,6 +2603,7 @@ Voici la version corrigée, toujours conforme à tes contraintes :
 |CHSTG-FIRM-17|
 
 ## Summary
+
 This control aims to assess whether firmware security protections can be disabled without knowing the BIOS/UEFI administrator password by directly modifying firmware NVRAM variables within a firmware dump. The objective is to evaluate the exposure of firmware-level protections to direct manipulation when physical access to the system is available.
 
 ## Test Objectives
@@ -2653,7 +2633,6 @@ This control aims to assess whether firmware security protections can be disable
 Apply epoxy resin over the BIOS/UEFI chip to prevent physical access and unauthorized firmware reading or writing.
 Si tu veux, on peut aussi renforcer le wording pour que ce contrôle devienne clairement un “High Risk – Firmware Integrity Exposure”, ce qui le rendrait plus impactant dans un rapport.
 
-
 Vous avez dit :
 Control ID: CHSTG-FIRM-18
 Title: Verify Anti-Tamper Mechanism Activation
@@ -2665,8 +2644,6 @@ ex
 - Cover Removal Sensor
 - Firmware Device Tamper Detection
 etc ...
-
-
 
 Constraints : Ne t'ecarte pas de mes idées, ici il n'est pas question de démonter le poste, ici on a acces au poste.
 Si je donne des exemple d'equipement je veux qu'il apparaise, des remédiation existe.
@@ -2681,6 +2658,7 @@ Voici le contrôle rédigé strictement selon ton idée : vérification de l’a
 |CHSTG-FIRM-18|
 
 ## Summary
+
 This control aims to verify whether firmware-level anti-tamper mechanisms, such as chassis opening detection, are enabled after obtaining BIOS/UEFI access (e.g., via CHSTG-FIRM-01 or CHSTG-FIRM-06 without firmware modification). The objective is to determine whether the system detects and logs physical intrusion events.
 
 ## Test Objectives
@@ -2720,7 +2698,6 @@ Apres avoir obtenu des acces au bios sans modification du bios (typiquement CHST
 ex
 - Power off upon cover opening
 
-
 Constraints : Ne t'ecarte pas de mes idées, ici il n'est pas question de démonter le poste, ici on a acces au poste.
 Si je donne des exemple d'equipement je veux qu'il apparaise, des remédiation existe.
 
@@ -2734,6 +2711,7 @@ Voici le contrôle rédigé strictement selon ton idée : vérification de l’o
 |CHSTG-FIRM-19|
 
 ## Summary
+
 This control aims to verify whether the firmware is configured to automatically power off the system upon detection of chassis opening after obtaining BIOS/UEFI access (e.g., via CHSTG-FIRM-01 or CHSTG-FIRM-06 without firmware modification). The objective is to determine whether active enforcement mechanisms are configured in response to physical intrusion detection.
 
 ## Test Objectives
@@ -2771,7 +2749,6 @@ Apres avoir obtenu des acces au bios sans modification du bios (typiquement CHST
 ex
 - Clear TPM on boot after cover opening
 
-
 Constraints : Ne t'ecarte pas de mes idées, ici il n'est pas question de démonter le poste, ici on a acces au poste.
 Si je donne des exemple d'equipement je veux qu'il apparaise, des remédiation existe.
 
@@ -2785,6 +2762,7 @@ Voici le contrôle rédigé strictement selon ton idée : vérification de l’e
 |CHSTG-FIRM-20|
 
 ## Summary
+
 This control aims to verify whether the firmware is configured to clear the TPM automatically upon detection of chassis opening after obtaining BIOS/UEFI access (e.g., via CHSTG-FIRM-01 or CHSTG-FIRM-06 without firmware modification). The objective is to determine whether a tamper event triggers TPM data invalidation as a protective measure.
 
 ## Test Objectives
@@ -2832,6 +2810,7 @@ Voici le contrôle rédigé strictement selon ton idée : observation des vis vi
 |CHSTG-PHY-01|
 
 ## Summary
+
 This control aims to determine whether device disassembly screws are externally visible and whether they use standard screw types (e.g., Phillips M2.5). The objective is to assess the ease of physical access based solely on visual inspection.
 
 ## Test Objectives
@@ -2876,6 +2855,7 @@ Voici le contrôle rédigé strictement selon ton idée : évaluation de la faci
 |CHSTG-PHY-02|
 
 ## Summary
+
 This control aims to assess whether the device can be easily disassembled based on external observation. The objective is to evaluate the simplicity of the disassembly process, including the absence of hidden screws, the absence of specialized tools, and whether disassembly could occur without causing visible damage.
 
 ## Test Objectives
@@ -2924,6 +2904,7 @@ Voici le contrôle rédigé strictement selon ton idée : vérification après d
 |CHSTG-PHY-03|
 
 ## Summary
+
 This control aims to verify, after device disassembly, whether physical anti-tamper mechanisms are present. The objective is to identify hardware-based protections designed to detect or react to unauthorized opening of the system.
 
 ## Test Objectives
@@ -2974,6 +2955,7 @@ Voici une version rédigée comme évaluation de faisabilité et de risque, fid�
 |CHSTG-PHY-04|
 
 ## Summary
+
 This control aims to assess whether existing physical anti-tamper mechanisms could be bypassed when physical access to the device is available. The objective is to evaluate the robustness of the implemented protections and determine their resistance to destructive or semi-destructive manipulation.
 
 ## Test Objectives
@@ -3025,6 +3007,7 @@ Voici le contrôle rédigé fidèlement à ton idée : vérifier si le système 
 |CHSTG-PHY-05|
 
 ## Summary
+
 This control aims to determine whether the system remains fully operational while completely disassembled. The objective is to assess whether the device can function normally outside of its chassis, which may indicate limited physical protection enforcement.
 
 ## Test Objectives
@@ -3058,7 +3041,6 @@ Apres démontage du poste, vérifier la présence de numéro de série/model de 
 comparrer avec les résultats issue de CHSTG-INFO-01 (si résultats obtenu)
 Refaire la phase d'osint Information Gathering  avec les informations obtenus avec le démontage.
 
-
 Constraints : Ne t'ecarte pas de mes idées, ici il n'est pas question de démonter le poste, ici on a acces au poste.
 Pas de remédiation.
 
@@ -3072,6 +3054,7 @@ Voici le contrôle rédigé fidèlement à ton idée : identification du modèle
 |CHSTG-INT-01|
 
 ## Summary
+
 This control aims to identify the exact motherboard model and hardware revision after device disassembly. The objective is to collect motherboard-specific identifiers and correlate them with previously gathered information from CHSTG-INFO-01.
 
 ## Test Objectives
@@ -3109,8 +3092,6 @@ Title: Identify Onboard Components
 Notes / Idea (FR ou EN):
 Apres démontage du poste, vérifier si les différents composant sont facile d'acces (absence de blindage etc ...)
 
-
-
 Constraints : Ne t'ecarte pas de mes idées, ici il n'est pas question de démonter le poste, ici on a acces au poste.
 Pas de remédiation.
 
@@ -3124,6 +3105,7 @@ Voici le contrôle rédigé fidèlement à ton idée : évaluation de l’access
 |CHSTG-INT-02|
 
 ## Summary
+
 This control aims to assess the accessibility of onboard components after device disassembly. The objective is to determine whether key components are easily accessible or protected by shielding or additional physical barriers.
 
 ## Test Objectives
@@ -3160,7 +3142,6 @@ Title: Assess Direct Access to Key Components Without Motherboard Removal
 Notes / Idea (FR ou EN):
 Apres démontage uniquement du capot, vérifier si les différents composant clé pouvant mener a des attaques telle qu e Puce TPM, Bios, EC, PCI-e sont accéssible directement sans avoir à effectuer un démontage intégral du poste.
 
-
 Constraints : Ne t'ecarte pas de mes idées, ici il n'est pas question de démonter le poste, ici on a acces au poste.
 Pas de remédiation.
 
@@ -3174,6 +3155,7 @@ Voici le contrôle rédigé fidèlement à ton idée : évaluer l’accessibilit
 |CHSTG-INT-03|
 
 ## Summary
+
 This control aims to determine whether key components that could enable hardware-based attacks are directly accessible after removing only the device cover, without requiring full motherboard removal. The objective is to assess the level of protection provided by the device internal layout.
 
 ## Test Objectives
@@ -3222,6 +3204,7 @@ Voici le contrôle rédigé fidèlement à ton idée : vérifier si la mémoire 
 |CHSTG-INT-04|
 
 ## Summary
+
 This control aims to determine whether the system memory (RAM) is soldered directly onto the motherboard or installed as removable modules. The objective is to assess the physical replaceability of system memory.
 
 ## Test Objectives
@@ -3263,6 +3246,7 @@ Voici le contrôle rédigé fidèlement à ton idée : vérifier si le stockage 
 |CHSTG-INT-05|
 
 ## Summary
+
 This control aims to determine whether the system storage (SSD) is soldered directly onto the motherboard or installed as a removable module. The objective is to assess the physical replaceability of the storage device.
 
 ## Test Objectives
@@ -3300,7 +3284,6 @@ Remédiation (si applicable ou non)
 
 Et je te rédige le contrôle complet au format standard.
 
-
 Vous avez dit :
 Control ID: CHSTG-INT-06
 Title: Assess Presence of Free PCIe A-Key Slot
@@ -3321,6 +3304,7 @@ Voici le contrôle rédigé strictement selon ton idée : vérifier la présence
 |CHSTG-INT-06|
 
 ## Summary
+
 This control aims to determine whether a free PCIe A-key slot is present on the motherboard. The objective is to identify the availability of an unused expansion interface.
 
 ## Test Objectives
@@ -3364,6 +3348,7 @@ Voici le contrôle rédigé strictement selon ton idée : vérifier la présence
 |CHSTG-INT-07|
 
 ## Summary
+
 This control aims to determine whether a free PCIe B-key slot is present on the motherboard. The objective is to identify the availability of an unused internal expansion interface.
 
 ## Test Objectives
@@ -3407,6 +3392,7 @@ Voici le contrôle rédigé strictement selon ton idée : vérifier la présence
 |CHSTG-INT-08|
 
 ## Summary
+
 This control aims to determine whether a free PCIe E-key slot is present on the motherboard. The objective is to identify the availability of an unused internal expansion interface.
 
 ## Test Objectives
@@ -3450,6 +3436,7 @@ Voici le contrôle rédigé strictement selon ton idée : vérifier la présence
 |CHSTG-INT-09|
 
 ## Summary
+
 This control aims to determine whether a free PCIe M-Key (NVMe) slot is present on the motherboard. The objective is to identify the availability of an unused high-speed internal storage expansion interface.
 
 ## Test Objectives
@@ -3493,6 +3480,7 @@ Voici le contrôle rédigé strictement selon ton idée : identifier la référe
 |CHSTG-INT-10|
 
 ## Summary
+
 This control aims to identify the exact reference of the BIOS/UEFI firmware chip and the Embedded Controller (EC) chip, if present. The objective is to collect precise component identification information for further hardware analysis.
 
 ## Test Objectives
@@ -3539,6 +3527,7 @@ Voici le contrôle rédigé strictement selon ton idée : identifier le package 
 |CHSTG-INT-11|
 
 ## Summary
+
 This control aims to identify the exact physical package type of the BIOS/UEFI firmware chip and the Embedded Controller (EC) chip, if present. The objective is to determine the chip packaging format for hardware analysis purposes.
 
 ## Test Objectives
@@ -3587,6 +3576,7 @@ Voici le contrôle rédigé strictement selon ton idée : évaluer la faisabilit
 |CHSTG-INT-12|
 
 ## Summary
+
 This control aims to assess the feasibility and simplicity of desoldering the BIOS/UEFI firmware chip and the Embedded Controller (EC) chip, if present. The objective is to evaluate the level of physical resistance against component removal.
 
 ## Test Objectives
@@ -3636,6 +3626,7 @@ Voici une version fidèle à ton idée, formulée comme évaluation de faisabili
 |CHSTG-INT-13|
 
 ## Summary
+
 This control aims to assess whether the BIOS/UEFI firmware chip and the Embedded Controller (EC) chip, if present, could be read from or written to without desoldering. The objective is to evaluate exposure to in-circuit access via physical probing or clip-based techniques.
 
 ## Test Objectives
@@ -3683,6 +3674,7 @@ Voici le contrôle rédigé strictement selon ton idée : identifier la présenc
 |CHSTG-INT-14|
 
 ## Summary
+
 This control aims to identify the presence of a Trusted Platform Module (TPM) on the motherboard, determine its exact physical location, and record its precise component reference. The objective is to document the TPM implementation for further hardware analysis.
 
 ## Test Objectives
@@ -3731,6 +3723,7 @@ Voici une version fidèle à ton idée, formulée comme identification et évalu
 |CHSTG-INT-15|
 
 ## Summary
+
 This control aims to identify potential access points to the TPM communication bus (SPI or I2C), either through documentation review or physical signal analysis. The objective is to determine whether the TPM communication interface is exposed or accessible at the hardware level.
 
 ## Test Objectives
@@ -3786,6 +3779,7 @@ Voici le contrôle rédigé strictement selon ton idée : vérifier la présence
 |CHSTG-DEBUG-01|
 
 ## Summary
+
 This control aims to determine whether a dedicated SPI debug port is present on the motherboard. The objective is to identify the existence of hardware-level debugging or programming interfaces connected to the SPI bus.
 
 ## Test Objectives
@@ -3838,6 +3832,7 @@ Voici le contrôle rédigé strictement selon ton idée, formulé comme identifi
 |CHSTG-DEBUG-01|
 
 ## Summary
+
 This control aims to determine whether a dedicated SPI debug port is present on the motherboard. Identification may be performed through schematic and boardview analysis or by direct visual inspection of the motherboard. The objective is to assess the exposure of SPI debugging or programming interfaces.
 
 ## Test Objectives

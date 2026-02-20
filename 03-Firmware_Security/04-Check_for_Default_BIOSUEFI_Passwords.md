@@ -5,6 +5,7 @@
 |CHSTG-FIRM-04|
 
 ## Summary
+
 This control aims to determine whether the BIOS/UEFI password configured on the system corresponds to a default or weak password (e.g., "123456", "admin", etc.).
 
 ## Test Objectives

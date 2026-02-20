@@ -5,6 +5,7 @@
 |CHSTG-INFO-02|
 
 ## Summary
+
 This control consists of collecting publicly available documentation describing how the device can be disassembled. The objective is to prepare future hardware analysis steps by understanding the opening procedure without performing any physical action on the device.
 
 ## Test Objectives

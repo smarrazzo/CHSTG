@@ -5,6 +5,7 @@
 |CHSTG-BOOT-07|
 
 ## Summary
+
 This control aims to determine whether the system allows booting from alternative devices such as CD/DVD or USB during startup.
 
 ## Test Objectives

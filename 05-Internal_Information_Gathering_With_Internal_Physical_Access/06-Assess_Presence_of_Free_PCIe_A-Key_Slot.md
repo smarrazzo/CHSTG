@@ -5,6 +5,7 @@
 |CHSTG-INT-06|
 
 ## Summary
+
 This control aims to determine whether a free PCIe A-key slot is present on the motherboard. The objective is to identify the availability of an unused expansion interface.
 
 ## Test Objectives

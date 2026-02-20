@@ -5,6 +5,7 @@
 |CHSTG-INFO-01|
 
 ## Summary
+
 This control aims to identify the exact system model and hardware revision using only the information physically visible on the device. The purpose of this step is strictly the identification and collection of hardware references that will be used in later analysis phases.
 
 ## Test Objectives

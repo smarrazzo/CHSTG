@@ -5,6 +5,7 @@
 |CHSTG-FIRM-01|
 
 ## Summary
+
 This control aims to determine whether BIOS/UEFI configuration information can be accessed without authentication. The objective is to verify if a read-only access is possible and whether security-related settings can be viewed without requiring credentials.
 
 ## Test Objectives

@@ -5,6 +5,7 @@
 |CHSTG-INFO-04|
 
 ## Summary
+
 This control aims to locate boardview documentation of the motherboard using the exact board reference identified previously. The objective is to identify the existence and availability of the physical layout files of the motherboard for later hardware analysis without performing any physical interaction with the device.
 
 ## Test Objectives

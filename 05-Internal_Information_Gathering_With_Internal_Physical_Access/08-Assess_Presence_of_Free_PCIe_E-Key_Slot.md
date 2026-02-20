@@ -5,6 +5,7 @@
 |CHSTG-INT-08|
 
 ## Summary
+
 This control aims to determine whether a free PCIe E-key slot is present on the motherboard. The objective is to identify the availability of an unused internal expansion interface.
 
 ## Test Objectives

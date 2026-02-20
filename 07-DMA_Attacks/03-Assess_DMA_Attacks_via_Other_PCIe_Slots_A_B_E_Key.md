@@ -1,13 +1,12 @@
 # Assess DMA Attacks via Other PCIe Slots (A, B, E Key)
 
-| ID           |
-|--------------|
-| CHSTG-DMA-03 |
+|ID          |
+|------------|
+|CHSTG-DMA-03|
 
 ## Summary
+
 Many modern laptops and desktops contain internal M.2 slots for expansion modules such as WiFi, Bluetooth (A or E Keys), or Cellular/WWAN (B Key). These slots are often routed directly through the PCIe bus. This control evaluates whether these secondary PCIe interfaces can be exploited to perform Direct Memory Access (DMA) attacks. By replacing an internal module with a malicious FPGA device using an adapter chain, an attacker can potentially bypass operating system security boundaries to read or modify system memory.
-
-
 
 ## Test Objectives
 - Determine if non-storage PCIe-based slots (A, B, or E keys) are subject to DMA protection policies.

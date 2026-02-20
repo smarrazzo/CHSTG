@@ -5,6 +5,7 @@
 |CHSTG-PHY-02|
 
 ## Summary
+
 This control aims to assess whether the device can be easily disassembled based on external observation. The objective is to evaluate the simplicity of the disassembly process, including the absence of hidden screws, the absence of specialized tools, and whether disassembly could occur without causing visible damage.
 
 ## Test Objectives

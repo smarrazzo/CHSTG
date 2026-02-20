@@ -5,6 +5,7 @@
 |CHSTG-PHY-04|
 
 ## Summary
+
 This control aims to assess whether existing physical anti-tamper mechanisms could be bypassed when physical access to the device is available. The objective is to evaluate the robustness of the implemented protections and determine their resistance to destructive or semi-destructive manipulation.
 
 ## Test Objectives

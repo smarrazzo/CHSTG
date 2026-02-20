@@ -5,6 +5,7 @@
 |CHSTG-FIRM-07|
 
 ## Summary
+
 This control aims to assess whether the BIOS/UEFI password protection can be bypassed by flashing an unlocked firmware image previously identified during CHSTG-INFO-06. The objective is to evaluate the exposure of the device to firmware replacement attacks when physical access is available.
 
 ## Test Objectives

@@ -1,13 +1,12 @@
 # Verify Presence of Full Disk Encryption
 
-| ID           |
-|--------------|
-| CHSTG-DISK-01 |
+|ID          |
+|------------|
+|CHSTG-DISK-01|
 
 ## Summary
+
 The first line of defense for data at rest is Full Disk Encryption (FDE). This control aims to verify if the primary storage medium (SSD/HDD) is protected by technologies such as BitLocker, LUKS, FileVault. Identifying the presence of encryption is a prerequisite for subsequent tests involving key extraction or offline data manipulation.
-
-
 
 ## Test Objectives
 - Confirm whether the disk volume is encrypted or if data is stored in plaintext.
@@ -29,7 +28,6 @@ This test focuses on verifying the encryption status by attempting to access the
 3.  **Validation:**
     - If the system prompts for a password/recovery key and identifies a known encryption header, the disk is encrypted.
     - If the partitions mount automatically and files are readable, the disk is **not** encrypted.
-
 
 ## Remediation
 - **Enable Encryption:** Activate Full Disk Encryption (e.g., BitLocker on Windows, LUKS on Linux) for all system and data partitions.

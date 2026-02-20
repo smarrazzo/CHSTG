@@ -5,6 +5,7 @@
 |CHSTG-FIRM-03|
 
 ## Summary
+
 This control aims to determine whether a BIOS/UEFI boot password is required during system startup before the operating system begins loading.
 
 ## Test Objectives

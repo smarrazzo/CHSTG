@@ -5,6 +5,7 @@
 |CHSTG-FIRM-17|
 
 ## Summary
+
 This control aims to assess whether firmware security protections can be disabled without knowing the BIOS/UEFI administrator password by directly modifying firmware NVRAM variables within a firmware dump. The objective is to evaluate the exposure of firmware-level protections to direct manipulation when physical access to the system is available.
 
 ## Test Objectives

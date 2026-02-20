@@ -5,6 +5,7 @@
 |CHSTG-BOOT-05|
 
 ## Summary
+
 This control aims to determine whether a security PIN code is required during system startup before the operating system loads.
 
 ## Test Objectives

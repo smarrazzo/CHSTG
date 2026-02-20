@@ -1,12 +1,12 @@
 # Assess Feasibility of Capturing TPM Bus Traffic During Boot
 
-| ID           |
-|--------------|
-| CHSTG-TPM-01 |
+|ID          |
+|------------|
+|CHSTG-TPM-01|
 
 ## Summary
-The Trusted Platform Module (TPM) is responsible for securely storing and releasing encryption keys, such as the BitLocker Volume Master Key (VMK). In many configurations, specifically "TPM-only" modes, the module automatically releases the key to the CPU over a physical bus (SPI or I2C) during the boot process. This control evaluates the risk of intercepting this sensitive data by physically sniffing the communication bus using logic analyzers. This attack is particularly effective because the communication between the TPM and the CPU is often unencrypted.
 
+The Trusted Platform Module (TPM) is responsible for securely storing and releasing encryption keys, such as the BitLocker Volume Master Key (VMK). In many configurations, specifically "TPM-only" modes, the module automatically releases the key to the CPU over a physical bus (SPI or I2C) during the boot process. This control evaluates the risk of intercepting this sensitive data by physically sniffing the communication bus using logic analyzers. This attack is particularly effective because the communication between the TPM and the CPU is often unencrypted.
 
 ## Test Objectives
 - Identify the physical bus type (SPI, I2C, or LPC) used by the TPM.
@@ -28,7 +28,6 @@ This test requires internal physical access to the motherboard to place probes o
 1.  **Configure Analyzer:** Set the logic analyzer software to trigger on the first transitions of the CLK or CS lines.
 2.  **Power On:** Start the target system.
 3.  **Capture and Decode:** Use SPI/I2C decoders within the analyzer software to convert the raw waveforms into hex data.
-
 
 ## Remediation
 - **Pre-Boot Authentication:** Configure disk encryption (e.g., BitLocker) to require a **PIN code** or a startup key in addition to the TPM. This prevents the TPM from releasing the master key into the bus until the user has been successfully authenticated.

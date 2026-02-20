@@ -5,6 +5,7 @@
 |CHSTG-FIRM-13|
 
 ## Summary
+
 This control aims to verify whether anti–cold boot protections are enabled in the BIOS/UEFI configuration after obtaining firmware access (e.g., via CHSTG-FIRM-01 or CHSTG-FIRM-06 without firmware modification). The objective is to determine whether memory protection mechanisms are configured to mitigate cold boot attacks.
 
 ## Test Objectives

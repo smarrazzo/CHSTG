@@ -1,13 +1,12 @@
 # Assess Extraction of Master Encryption Keys via DMA
 
-| ID           |
-|--------------|
-| CHSTG-DMA-08 |
+|ID          |
+|------------|
+|CHSTG-DMA-08|
 
 ## Summary
+
 The ultimate goal of many DMA attacks is the extraction of Full Disk Encryption (FDE) master keys. Once an attacker has successfully escalated privileges to a root or SYSTEM level using DMA injection (as seen in CHSTG-DMA-07), they can leverage native operating system tools to reveal the encryption protectors or master keys stored in volatile memory. This allows the attacker to decrypt the drive offline or maintain persistent access to the data even if the system is later powered down.
-
-
 
 ## Test Objectives
 - Utilize the privileged access obtained via DMA to retrieve disk encryption master keys or recovery protectors.

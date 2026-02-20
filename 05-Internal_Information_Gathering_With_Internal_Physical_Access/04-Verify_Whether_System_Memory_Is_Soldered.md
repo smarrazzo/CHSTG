@@ -5,6 +5,7 @@
 |CHSTG-INT-04|
 
 ## Summary
+
 This control aims to determine whether the system memory (RAM) is soldered directly onto the motherboard or installed as removable modules. The objective is to assess the physical replaceability of system memory.
 
 ## Test Objectives

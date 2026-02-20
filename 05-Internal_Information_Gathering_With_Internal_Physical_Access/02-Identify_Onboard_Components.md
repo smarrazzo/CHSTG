@@ -5,6 +5,7 @@
 |CHSTG-INT-02|
 
 ## Summary
+
 This control aims to assess the accessibility of onboard components after device disassembly. The objective is to determine whether key components are easily accessible or protected by shielding or additional physical barriers.
 
 ## Test Objectives

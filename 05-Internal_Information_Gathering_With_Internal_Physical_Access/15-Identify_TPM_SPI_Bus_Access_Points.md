@@ -5,6 +5,7 @@
 |CHSTG-INT-15|
 
 ## Summary
+
 This control aims to identify potential access points to the TPM communication bus (SPI or I2C), either through documentation review or physical signal analysis. The objective is to determine whether the TPM communication interface is exposed or accessible at the hardware level.
 
 ## Test Objectives

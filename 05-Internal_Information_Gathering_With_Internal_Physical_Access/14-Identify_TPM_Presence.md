@@ -5,6 +5,7 @@
 |CHSTG-INT-14|
 
 ## Summary
+
 This control aims to identify the presence of a Trusted Platform Module (TPM) on the motherboard, determine its exact physical location, and record its precise component reference. The objective is to document the TPM implementation for further hardware analysis.
 
 ## Test Objectives

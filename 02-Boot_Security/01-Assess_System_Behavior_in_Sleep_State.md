@@ -5,6 +5,7 @@
 |CHSTG-BOOT-01|
 
 ## Summary
+
 This control aims to determine whether the system is currently in a sleep state by observing its behavior while having direct access to the device.
 
 ## Test Objectives

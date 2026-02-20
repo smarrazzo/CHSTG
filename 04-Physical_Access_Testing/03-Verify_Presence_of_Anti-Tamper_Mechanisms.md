@@ -5,6 +5,7 @@
 |CHSTG-PHY-03|
 
 ## Summary
+
 This control aims to verify, after device disassembly, whether physical anti-tamper mechanisms are present. The objective is to identify hardware-based protections designed to detect or react to unauthorized opening of the system.
 
 ## Test Objectives

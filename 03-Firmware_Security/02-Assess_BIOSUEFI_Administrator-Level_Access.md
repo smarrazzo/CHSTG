@@ -5,6 +5,7 @@
 |CHSTG-FIRM-02|
 
 ## Summary
+
 This control aims to determine whether BIOS/UEFI configuration settings can be modified without authentication. The objective is to verify the presence of an administrator password protecting firmware configuration changes.
 
 ## Test Objectives

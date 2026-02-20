@@ -5,6 +5,7 @@
 |CHSTG-PHY-05|
 
 ## Summary
+
 This control aims to determine whether the system remains fully operational while completely disassembled. The objective is to assess whether the device can function normally outside of its chassis, which may indicate limited physical protection enforcement.
 
 ## Test Objectives

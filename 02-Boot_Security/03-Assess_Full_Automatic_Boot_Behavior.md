@@ -5,6 +5,7 @@
 |CHSTG-BOOT-03|
 
 ## Summary
+
 This control aims to determine whether the system automatically boots to the login screen without requiring any user interaction, such as a disk decryption PIN or pre-boot authentication.
 
 ## Test Objectives

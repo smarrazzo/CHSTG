@@ -1,13 +1,12 @@
 # Assess Presence of Hibernation File on Unencrypted Partition
 
-| ID           |
-|--------------|
-| CHSTG-DISK-02 |
+|ID          |
+|------------|
+|CHSTG-DISK-02|
 
 ## Summary
+
 Hibernation is a power-saving state where the operating system saves the current contents of the RAM to a file on the hard drive (e.g., `hiberfil.sys` on Windows) before powering off. Because RAM contains sensitive material—including master encryption keys for secondary volumes, user credentials, and active session tokens—the hibernation file becomes a static image of the system's secrets. If this file is stored on an unencrypted partition or if the disk encryption is bypassed, an attacker can extract these keys to compromise the rest of the system.
-
-
 
 ## Test Objectives
 - Locate and identify the hibernation file or swap partition on the target storage media.
