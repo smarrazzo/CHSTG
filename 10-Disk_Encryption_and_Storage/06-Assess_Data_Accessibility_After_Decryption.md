@@ -11,3 +11,5 @@
 ## How to Test
 
 ## Remediation
+
+(Merge with CHSTG-DISK-04)
