@@ -22,6 +22,8 @@ Based on OWASP methodology skeleton like [WSTG](https://github.com/OWASP/wstg/tr
 
 ![Process](Process_hard_small_horizontal.png "Small Process")
 
+![Process](Process_hard_full.png "Full Process")
+
 ## AI Usage Disclosure
 
 This methodology was structured and formatted with the assistance of Artificial Intelligence (AI) tools.
