@@ -19,9 +19,10 @@ Based on OWASP methodology skeleton like [WSTG](https://github.com/OWASP/wstg/tr
 - [11 — Post-Exploitation and Persistence](11-Post-Exploitation_and_Persistence/README.md)
 
 ## Check process 
-
+### Small Hardware pentest process
 ![Process_small](Process_hard_small_horizontal.png "Small Process")
 
+### Full Hardware pentest process
 ![Process_full](Process_hard_Full.png "Full Process")
 
 ## AI Usage Disclosure
