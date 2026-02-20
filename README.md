@@ -20,9 +20,9 @@ Based on OWASP methodology skeleton like [WSTG](https://github.com/OWASP/wstg/tr
 
 ## Check process 
 
-![Process](Process_hard_small_horizontal.png "Small Process")
+![Process_small](Process_hard_small_horizontal.png "Small Process")
 
-![Process](Process_hard_full.png "Full Process")
+![Process_full](Process_hard_Full.png "Full Process")
 
 ## AI Usage Disclosure
 
