@@ -11,3 +11,5 @@
 ## How to Test
 
 ## Remediation
+
+(To remove, merged with CHSTG-FIRM-11)
