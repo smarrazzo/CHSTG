@@ -22,6 +22,19 @@ Based on OWASP methodology skeleton like [WSTG](https://github.com/OWASP/wstg/tr
 
 ![Process](Process_hard_small_horizontal.png "Small Process")
 
+## AI Usage Disclosure
+
+This methodology was structured and formatted with the assistance of Artificial Intelligence (AI) tools.
+
+The AI was used **exclusively for formatting, structure harmonization, and language refinement**, in order to maintain a consistent methodology framework across all sections.
+
+Due to dyslexia, writing and maintaining large structured documentation is particularly challenging. AI assistance was therefore used as a support tool for editorial consistency and readability.
+
+**Important:**  
+All technical content, testing steps, attack paths, methodology design, and security concepts were conceived, designed, and validated manually without AI-generated methodology decisions.
+
+AI did not design, invent, or define any testing procedure contained in this guide.
+
 ## License
 
 Shield: [![CC BY-SA 4.0][cc-by-sa-shield]][cc-by-sa]
